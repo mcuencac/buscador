@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, Arial;
+    margin: 0;
+    background: #f4f6f8;
+    color: #111;
+}
+
+.header {
+    padding: 20px 150px 20px 50px !important;
+    color: #fff;
+    background-image: url("./../img/header.jpg");
+    background-position: top right;
+    background-size: cover;
+    height: 250px;
+    padding-left: 5rem;
+}
+
+.header h1 {
+  font-family: "Fascinate", sans-serif;
+  font-size: 44px;
+  letter-spacing: 1.5px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search input {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.search button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.search button[type="submit"] {
+    background: #2563eb;
+    color: #fff;
+}
+
+#clearBtn {
+    background: #e5e7eb;
+}
+
+.status {
+    margin: 14px 0;
+    color: #444;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 14px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.poster {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #ddd;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.stars {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #f5c518;
+    /* color IMDb */
+}
+
+.rating-number {
+    color: #555;
+    margin-left: 4px;
+    font-size: 13px;
+}
+
+.tooltip {
+    position: absolute;
+    max-width: 280px;
+    padding: 12px;
+    background: rgba(20, 20, 20, 0.95);
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 9999;
+}
+
+.tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#genreFilter {
+    display: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+    padding: 10px 33px 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+/* Hover */
+#genreFilter:hover {
+    border-color: #2563eb;
+}
+
+/* Focus */
+#genreFilter:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Montserrat como fuente base */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Fascinate solo para el título principal */
+h1 {
+  font-family: "Fascinate", sans-serif;
+  font-size: 42px;
+  letter-spacing: 1px;
+}
