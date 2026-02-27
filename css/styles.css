@@ -45,19 +45,19 @@ body {
     border-radius: 8px;
 }
 
-.search button {
+.btn {
     padding: 10px 14px;
     border: 0;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.search button[type="submit"] {
+.btn.btn-primary {
     background: #2563eb;
     color: #fff;
 }
 
-#clearBtn {
+.btn {
     background: #e5e7eb;
 }
 
@@ -89,6 +89,25 @@ body {
     border-radius: 10px;
     background: #ddd;
 }
+.card.detail {
+    position: absolute;
+    max-width: 960px;
+}
+
+.card.detail > div {
+    display: flex;
+}
+
+.card.detail .poster {
+    margin-right: 25px;
+    max-width: 220px;
+}
+
+.card.detail > div p {
+    margin-bottom: 20px;
+}
+
+
 
 .card h3 {
     margin: 0;

@@ -374,23 +374,25 @@ function renderDetail(movie) {
 
   results.innerHTML = `
     <article class="card detail">
-      <button id="backBtn" type="button">⬅ Volver</button>
-
-      <img
-        id="detailPoster"
-        class="poster"
-        src="${getPosterUrl(movie)}"
-        alt="${movie.Title}"
-        loading="lazy"
-      >
-
-      <h2>${movie.Title} (${movie.Year || "N/A"})</h2>
-      <p><strong>Tipo:</strong> ${movie.Type || "N/A"}</p>
-      <p><strong>Género:</strong> ${movie.Genre || "N/A"}</p>
-      <p><strong>Director:</strong> ${movie.Director || "N/A"}</p>
-      <p><strong>Actores:</strong> ${movie.Actors || "N/A"}</p>
-      <p><strong>IMDb:</strong> ${movie.imdbRating || "N/A"}</p>
-      <p><strong>Sinopsis:</strong> ${movie.Plot || "N/A"}</p>
+      <button id="backBtn" type="button" class="btn btn-primary">⬅ Volver</button>
+      <div>
+        <img
+          id="detailPoster"
+          class="poster"
+          src="${getPosterUrl(movie)}"
+          alt="${movie.Title}"
+          loading="lazy"
+        >
+        <div>
+          <h2>${movie.Title} (${movie.Year || "N/A"})</h2>
+          <p><strong>${renderStars(movie.imdbRating) || "N/A"}</strong></p>
+          <p><strong>Tipo:</strong> ${movie.Type || "N/A"}</p>
+          <p><strong>Género:</strong> ${movie.Genre || "N/A"}</p>
+          <p><strong>Director:</strong> ${movie.Director || "N/A"}</p>
+          <p><strong>Actores:</strong> ${movie.Actors || "N/A"}</p>        
+          <p><strong>Sinopsis:</strong> ${movie.Plot || "N/A"}</p>
+        </div>
+      </div>
     </article>
   `;
 
